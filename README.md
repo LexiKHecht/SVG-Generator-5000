@@ -1,5 +1,5 @@
 
-  # README Generator
+  # README Generator 3000!
   ![License](https://img.shields.io/badge/License-MIT-blue.svg)
 
   ## Description
