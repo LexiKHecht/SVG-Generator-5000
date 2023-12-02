@@ -67,7 +67,7 @@ function userPrompt() {
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  fs.writeFile(fileName, generateMarkdown(data, currentCat), function (error) {
+  fs.writeFile(fileName, generateMarkdown(data), function (error) {
     console.log(fileName + " generated");
 
     if (error) {
@@ -77,21 +77,8 @@ function writeToFile(fileName, data) {
 }
 
 
-
-function giveCat() {
-  shuffledCats = cats.sort(() => Math.random() - 0.5);
-  currentCat = shuffledCats[0];
-}
-
-const cats = [
-  { cat: <img width="200" src="./cat01.png" alt="cat picture"></img>},
-  { cat: <img width="200" src="./cat02.png" alt="cat picture"></img> },
-  { cat: <img width="200" src="./cat03.png" alt="cat picture"></img> },
-  { cat: <img width="200" src="./cat04.png" alt="cat picture"></img> }
-];
 // TODO: Create a function to initialize app
 function init() {
-  giveCat();
   userPrompt()
     .then(function (data) {
       writeToFile("README.md", data);

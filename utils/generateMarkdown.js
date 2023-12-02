@@ -39,7 +39,7 @@ function generateMarkdown(data, cuteCat) {
 
   ## License
 
-  This application is covered under the ${data.license} license.
+  This application is covered under the [${data.license}](LICENSE) license.
 
   ## Contributing
 
@@ -54,7 +54,7 @@ function generateMarkdown(data, cuteCat) {
 
   If you have any questions or issues, please contact me at ${data.email}. You can find more information of my work at https://github.com/${data.github}.
 
-${data.catGif === "Yes" ? cuteCat : ""}
+${data.catGif === "Yes" ? '<img width= 200px src="./cat01.png" alt="cat picture"></img>' : ""}
 
   `
 ;
