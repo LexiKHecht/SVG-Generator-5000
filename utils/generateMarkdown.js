@@ -52,7 +52,7 @@ function generateMarkdown(data, cuteCat) {
 
   ## Questions
 
-  If you have any questions or issues, please contact me at ${data.email}. You can find more information of my work at https://github.com/${data.github}.
+  If you have any questions or issues, please contact me at ${data.email}. You can also find more of my work at https://github.com/${data.github}.
 
 ${data.catGif === "Yes" ? '<img width= 200px src="./cat01.png" alt="cat picture"></img>' : ""}
 
