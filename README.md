@@ -23,7 +23,7 @@
 
   Open your terminal and navigate to the project location. Then type in node index.js, answer the prompts, and out comes a professional README!
 
-https://github.com/LexiKHecht/README-Generator-3000/assets/145725343/b64e2cba-3cd5-4c73-a87e-e6a3fd659ba7
+https://github.com/LexiKHecht/README-Generator-3000/assets/145725343/5d738171-dfd2-436a-9020-5229e73f94e7
 
   ## License
 
