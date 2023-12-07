@@ -1,63 +1,31 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
-const generateMarkdown = require("./utils/generateMarkdown");
+const shapes = require("./lib/shapes");
 let shuffledCats, currentCat;
 
 // TODO: Create an array of questions for user input
 const questions = [
   {
     type: "input",
-    name: "title",
-    message: "What is the name of your project?",
+    name: "text",
+    message: "What would you like your svg to say? (up to 3 characters)",
   },
   {
     type: "input",
-    name: "github",
-    message: "What is your GitHub username?",
-  },
-  {
-    type: "input",
-    name: "email",
-    message: "What is your email address?",
-  },
-  {
-    type: "input",
-    name: "description",
-    message: "Please write a short description of your project",
+    name: "textColor",
+    message: "What color would you like your text to be?",
   },
   {
     type: "list",
-    name: "license",
-    message: "What kind of license should your project have?",
-    choices: ["MIT", "APACHE_2.0", "GPL_3.0", "BSD_3", "None"],
+    name: "shape",
+    message: "What shape would you like your svg?",
+    choices: ["Circle", "Triangle", "Square"],
   },
   {
     type: "input",
-    name: "dependencies",
-    message: "What command is required to install your dependencies?",
-  },
-  {
-    type: "input",
-    name: "tests",
-    message: "What command is required to run your tests?",
-  },
-  {
-    type: "input",
-    name: "repo",
-    message: "What does the user need to know about using this project?",
-  },
-  {
-    type: "input",
-    name: "contributions",
-    message:
-      "What does the user need to know about contributing to the repository?",
-  },
-  {
-    type: "list",
-    name: "catGif",
-    message: "Do you want a cute cat pic at the bottom of your README?",
-    choices: ["Yes", "No (I'm lame)"],
+    name: "shapeColor",
+    message: "What color would you like the shape to be?",
   },
 ];
 
@@ -67,11 +35,14 @@ function userPrompt() {
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  fs.writeFile(fileName, generateMarkdown(data), function (error) {
+  fs.writeFile(fileName, shapes(data), function (error) {
     console.log(fileName + " generated");
 
     if (error) {
       throw error;
+    } else if (questions.text.length > 3) {
+      console.log("Must enter a value of no more than 3 characters");
+      promptUser();
     }
   });
 }
@@ -81,7 +52,7 @@ function writeToFile(fileName, data) {
 function init() {
   userPrompt()
     .then(function (data) {
-      writeToFile("README.md", data);
+      writeToFile("SVG", data);
     })
     .then(function () {
       console.log("Done!");
