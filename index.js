@@ -2,14 +2,20 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const setShape = require('./lib/setShape.js')
-const fileName = "./svg";
+const fileName = "./logo.svg";
 
-// TODO: Create an array of questions for user input
+// ...the questions
 const questions = [
   {
     type: "input",
     name: "text",
     message: "What would you like your svg to say? (up to 3 characters)",
+    validate: (answer) => {
+      if (answer.length > 3) {
+          return console.log("\n Text must be three characters or less! Please try again");
+      }
+      return true;
+  }
   },
   {
     type: "input",
@@ -35,16 +41,7 @@ function userPrompt() {
 }
 
 
-// TODO: Create a function to write README file
-// function writeToFile(fileName, data) {
-//   fs.writeFile(fileName, shapes(data), function (error) {
-//     console.log(fileName + " generated");
-
-//      if (error) {
-//       throw error;
-//     }
-//   });
-// }
+// function to create svg
 function createLogo(response) {
   const svg = setShape(response);
   fs.writeFile(fileName, svg, ()=> console.log('Generated logo.svg'));
@@ -52,27 +49,15 @@ function createLogo(response) {
 
 // TODO: Create a function to initialize app
 function init() {
+  // run questions to get user data
   userPrompt()
   .then((response) => {
+    // input user data
     createLogo(response);
     })
 .catch(err => {
         console.log(err)
     });
 }
-    // .then(function (data) {
-    //    if (questions.text.length > 3) {
-    //   console.log("Must enter a value of no more than 3 characters");
-    //   userPrompt();
-    // } else
-//       writeToFile("SVG", data);
-//     })
-//     .then(function () {
-//       console.log("Done!");
-//     })
-//     .catch(function (error) {
-//       console.log(error);
-//     });
-//  }
 // Function call to initialize app
 init();
