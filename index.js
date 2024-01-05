@@ -1,7 +1,7 @@
 // TODO: Include packages needed for this application
 const fs = require("fs");
 const inquirer = require("inquirer");
-const setShape = require('./lib/setShape.js')
+const setShape = require("./lib/setShape.js");
 const fileName = "./logo.svg";
 
 // ...the questions
@@ -12,10 +12,12 @@ const questions = [
     message: "What would you like your svg to say? (up to 3 characters)",
     validate: (answer) => {
       if (answer.length > 3) {
-          return console.log("\n Text must be three characters or less! Please try again");
+        return console.log(
+          "\n Text must be three characters or less! Please try again"
+        );
       }
       return true;
-  }
+    },
   },
   {
     type: "input",
@@ -37,26 +39,24 @@ const questions = [
 
 function userPrompt() {
   return inquirer.prompt(questions);
-  
 }
 
-
-// function to create svg
+// function to create svg and write it to svg file
 function createLogo(response) {
   const svg = setShape(response);
-  fs.writeFile(fileName, svg, ()=> console.log('Generated logo.svg'));
+  fs.writeFile(fileName, svg, () => console.log("Generated logo.svg"));
 }
 
 // TODO: Create a function to initialize app
 function init() {
   // run questions to get user data
   userPrompt()
-  .then((response) => {
-    // input user data
-    createLogo(response);
+    .then((response) => {
+      // input user data
+      createLogo(response);
     })
-.catch(err => {
-        console.log(err)
+    .catch((err) => {
+      console.log(err);
     });
 }
 // Function call to initialize app
