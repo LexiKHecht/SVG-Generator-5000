@@ -1,4 +1,4 @@
-// TODO: Include packages needed for this application
+
 const fs = require("fs");
 const inquirer = require("inquirer");
 const setShape = require("./lib/setShape.js");
@@ -36,7 +36,7 @@ const questions = [
     message: "What color would you like the shape to be?",
   },
 ];
-
+// function that initiates prompt questions
 function userPrompt() {
   return inquirer.prompt(questions);
 }
@@ -47,9 +47,9 @@ function createLogo(response) {
   fs.writeFile(fileName, svg, () => console.log("Generated logo.svg"));
 }
 
-// TODO: Create a function to initialize app
+
 function init() {
-  // run questions to get user data
+  // call prompt function to get user data
   userPrompt()
     .then((response) => {
       // input user data
