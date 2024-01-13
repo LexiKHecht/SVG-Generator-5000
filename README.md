@@ -1,10 +1,13 @@
 
-  # undefined
-  ![License](https://img.shields.io/badge/License-undefined-blue.svg)
+  # SVG Generator 5000!
+
+  [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+  [![Node.js Badge](https://img.shields.io/badge/Node.js-393?logo=nodedotjs&logoColor=fff&style=flat)](https://nodejs.org/en) 
+  [![Jest Badge](https://img.shields.io/badge/Jest-C21325?logo=jest&logoColor=fff&style=flat)](https://jestjs.io/)
 
   ## Description
 
-  undefined
+  A CLI app that creates a unique SVG logo by answering a few prompted questions. The prompts allow the user their choice between 3 shapes (square, circle, triangle), 3 or more character text, and colors for each.
 
   ## Table of Contents
 
@@ -17,74 +20,26 @@
   ## Installation
 
   To install required dependencies, run the following command:
-  > undefined
-
-  ## Usage
-
-  undefined
-
-  ## License
-
-  This application is covered under the [undefined](LICENSE) license.
-
-  ## Contributing
-
-  undefined
-
-  ## Tests
-
-  To run tests, run the following command:
-  > undefined
-
-  ## Questions
-
-  If you have any questions or issues, please contact me at undefined. You can also find more of my work at https://github.com/undefined.
-
-
-
-
-  # README Generator 3000!
-  ![License](https://img.shields.io/badge/License-MIT-blue.svg)
-
-  ## Description
-
-  This project creates a README file using node.js and inquirer version 8.2.4.
-
-  ## Table of Contents
-
-  * [Installation](#installation)
-  * [Usage/Demo](#usage)
-  * [License](#license)
-  * [Attributions](#attributions)
-  * [Questions](#questions)
-
-  ## Installation
-
-  To install required dependencies, run the following command:
   > npm i
 
   ## Usage
 
-  Open your terminal and navigate to the project location. Then type in node index.js, answer the prompts, and out comes a professional README!
+  To initiate the app, run the following command:
+  > npm start
 
-https://github.com/LexiKHecht/README-Generator-3000/assets/145725343/5d738171-dfd2-436a-9020-5229e73f94e7
+
+https://github.com/LexiKHecht/SVG-Generator-5000/assets/145725343/876d5cd1-c1b7-4ef5-82ed-862333fbd949
 
   ## License
 
   This application is covered under the [MIT](LICENSE) license.
 
-  ## Contributing
+  ## Tests
 
-  Open Source contributions
-
-  ## Attributions
-  
-  - [Cat PNG by Vecteezy](https://www.vecteezy.com/free-png/dog)
+  To run tests, run the following command:
+  > npm test
 
   ## Questions
 
-  If you have any questions or issues, please contact me at Lexi@gmail.com. You can also find more of my work at https://github.com/LexiKHecht.
-
-<img width= 200px src="./cat01.png" alt="cat picture"></img>
-
-  
+ If you have any questions or issues, please contact me at Lexikhecht@gmail.com. You can also find more of my work at https://github.com/LexiKHecht.
+ 
