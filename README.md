@@ -27,8 +27,7 @@
   To initiate the app, run the following command:
   > npm start
 
-
-https://github.com/LexiKHecht/SVG-Generator-5000/assets/145725343/876d5cd1-c1b7-4ef5-82ed-862333fbd949
+[SVG-Tests&Demo.webm](https://github.com/LexiKHecht/SVG-Generator-5000/assets/145725343/03ac3569-e285-4fc7-bbae-eaea919a7ba4)
 
   ## License
 
